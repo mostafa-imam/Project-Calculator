@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: solid red; */
 }
 
 body {
@@ -12,11 +13,24 @@ body {
     font-size: 16px;
     font-style: normal;
     line-height: 1.5;
-    color: #333;
+    color: black;
     background-color: #70758e;
 }
 
 img {
     width: 30px;
     height: auto;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #293042;
+    box-shadow: 3px 3px 5px 0px rgba(18, 20, 27, 0.377);
+}
+
+.logo {
+    font-size: 50px;
+    margin-left: 170px;
 }

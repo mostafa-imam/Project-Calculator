@@ -13,7 +13,7 @@ body {
     font-style: normal;
     line-height: 1.5;
     color: black;
-    background-color: #70758e;
+    background-color: #bfc2d3;
 }
 
 nav {
@@ -21,12 +21,13 @@ nav {
     display: flex;
     align-items: center;
     background-color: #293042;
-    box-shadow: 3px 3px 5px 0px rgba(18, 20, 27, 0.377);
+    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0);
 }
 
 .logo {
     font-size: 50px;
     margin-left: 170px;
+    color: white;
 }
 
 .grand {
@@ -37,13 +38,13 @@ nav {
 }
 
 .container {
-    min-width: 500px;
+    min-width: 450px;
     height: 700px;
     display: flex;
     flex-direction: column;
-    background-color: #293042;
-    border-radius: 40px;
-    box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
+    background-color: #212736;
+    border-radius: 60px;
+    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
     padding: 10px;
 }
 
@@ -98,4 +99,82 @@ nav {
     border-radius: 10px;
     border: inherit;
     align-self: flex-end;
+}
+
+.operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #121620;
+    padding: 20px;
+    border-radius: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 2px 0px rgb(0, 0, 0);
+}
+
+.math {
+    font-weight: 100;
+    font-size: xx-large;
+    width: 85px;
+    height: 85px;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 5px;
+}
+
+.zero {
+    flex-grow: 2;
+}
+
+.clear {
+    flex-grow: 3;
+    background-color: #bfc2d3;
+    color: rgb(0, 0, 0);
+    border: #70758e;
+    box-shadow: inset 0px 0px 1px 1px #bfc2d3;
+}
+
+.operator {
+    color: rgba(255, 255, 255, 0.932);
+    background-color: #cd4407;
+    border: #1a0801;
+    box-shadow: inset 0px 0px 1px 1px #cd4407;
+}
+
+.digit {
+    background-color: #1d2435;
+    color: white;
+    border: #0a0c11;
+    box-shadow: inset 0px 0px 1px 1px #525358;
+}
+
+.Equals {
+    background-color: #bfc2d3;
+    color: black;
+    border: #70758e;
+    box-shadow: inset 0px 0px 1px 1px #bfc2d3;
+}
+
+.decimal {
+    background-color: #1d2435;
+    color: white;
+    border: #0a0c11;
+    box-shadow: inset 0px 0px 1px 1px #525358;
 }

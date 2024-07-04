@@ -30,6 +30,10 @@ nav {
     color: white;
 }
 
+.helper{
+    flex-grow: 1;
+}
+
 .grand {
     display: flex;
     justify-content: center;

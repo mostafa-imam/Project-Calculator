@@ -231,3 +231,22 @@ function removeHistoryCards() {
         history.textContent = '';
     }
 }
+
+function handleKeydown(event) {
+    const key = event.key;
+    if (/\d/.test(key)) {
+        handleDigitClick({target: {dataset: {digit: key}}});
+    } else if (['+', '-', '*', '/'].includes(key)) {
+        handleOperatorClick({target: {dataset: {operator: key}}});
+    } else if (key === 'Enter') {
+        handleEqualsClick();
+    } else if (key === 'Backspace') {
+        handleBackspaceClick();
+    } else if (key === 'Escape') {
+        handleClearClick();
+    } else if (key === '.') {
+        handleDigitClick({target: {dataset: {digit: key}}});
+    }
+}
+
+disableDecimal();

@@ -26,7 +26,7 @@ nav {
 
 .logo {
     font-size: 50px;
-    margin-left: 170px;
+    flex-grow: 3;
     color: white;
 }
 
@@ -38,74 +38,130 @@ nav {
 }
 
 .container {
-    min-width: 450px;
+    width: 450px;
     height: 700px;
     display: flex;
-    flex-direction: column;
     background-color: #212736;
-    border-radius: 60px;
-    box-shadow: 0px 0px 5px 1px rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.results {
-    display: flex;
-    height: 200px;
-    padding: 20px;
     border-radius: 40px;
-
+    box-shadow: 0px 0px 5px 3px rgb(77, 76, 76);
+    transition-duration: 400ms;
 }
 
-.result {
-    flex: 2;
-    align-self: flex-end;
-    text-align: right;
-    color: white;
-    font-size: 40px; 
-    font-weight:200;
-    padding-right: 30px;
+.containerOnHistory {
+    width: 900px;
+    height: 700px;
+    display: flex;
+    background-color: #212736;
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px 3px rgb(77, 76, 76);
+    transition-duration: 400ms;
 }
 
-.historyIcon {
-    width: 50px;
-    height: auto;
+.historian {
+    transition-duration: 400ms;
+    width: 0px;
+    overflow: hidden;
+    border-radius: 100px;
+    background: #62626400;
+}
+
+.history {
+    width: 700px;
+    margin: 20px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 5px 2px rgb(124, 122, 122);
+    background-color: #bfc2d3;
     padding: 10px;
+    transition-duration: 400ms;
+    overflow-y: auto;
+    max-height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
-.backspaceIcon {
-    width: 50px;
-    height: auto;
-    padding: 10px;
-}
-
-
-.backspace-button:hover {
-    background-color: #343d53;
-}
-
-.history-button:hover {
-    background-color: #3f4964;
-}
-
-.history-button {
-    background-color: inherit;
-    border-radius: 10px;
-    border: inherit;
-    align-self: flex-start; 
-}
-
-.backspace-button {
-    background-color: inherit;
-    border-radius: 10px;
-    border: inherit;
-    align-self: flex-end;
+.history::-webkit-scrollbar { 
+    display: none;
 }
 
 .operation {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    border-radius: 60px;
     height: 100%;
+    width: 100%;
+}
+
+.results {
+    display: flex;
+    height: 200px;
+    min-width: 400px;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.result {
+    flex-grow: 3;
+    align-self: flex-end;
+    text-align: right;
+    color: white;
+    font-size: 40px; 
+    font-weight: 200;
+    padding-right: 30px;
+    width: 300px;
+    border: solid rgba(255, 255, 255, 0.432) 1px;
+    border-radius: 30px;
+}
+
+.history-button {
+    position: relative;
+    background-color: inherit;
+    border-radius: 15px;
+    border: inherit;
+    align-self: flex-start;
+}
+
+.backspace-button {
+    background-color: inherit;
+    border-radius: 15px;
+    border: inherit;
+    align-self: flex-end;
+}
+
+.historyIcon {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: #bfc2d3;
+    border-radius: 30px;
+}
+
+.backspaceIcon {
+    width: 50px;
+    height: auto;
+    padding: 5px;
+    background-color: #bfc2d3;
+    border-radius: 30px;
+    margin-left: 5px;
+}
+
+.backspaceIcon:hover {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    background-color: #bbc0cf;
+    border-radius: 30px;
+    margin-left: 5px;
+}
+
+.historyIcon:hover {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    background-color: #bbc0cf;
+    border-radius: 30px;
+    transition: 100ms;
 }
 
 .calc {
@@ -114,29 +170,46 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    background-color: #121620;
+    gap: 10px;
     padding: 20px;
     border-radius: 60px;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 2px 0px rgb(0, 0, 0);
 }
 
 .math {
     font-weight: 100;
-    font-size: xx-large;
+    font-size: 1.5rem;
     width: 85px;
     height: 85px;
     padding: 25px;
     border-radius: 30px;
-    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.digit:hover {
+    background-color: #35415f;
+}
+
+.clear:hover {
+    background-color: #f56122;
+    border: #a3abce;
+}
+
+.Equals:hover {
+    background-color: #f56122;
+    border: #a3abce;
+}
+
+.operator:hover {
+    background-color: #f56122;
 }
 
 .row {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .zero {
@@ -148,33 +221,54 @@ nav {
     background-color: #bfc2d3;
     color: rgb(0, 0, 0);
     border: #70758e;
-    box-shadow: inset 0px 0px 1px 1px #bfc2d3;
 }
 
 .operator {
-    color: rgba(255, 255, 255, 0.932);
-    background-color: #cd4407;
-    border: #1a0801;
-    box-shadow: inset 0px 0px 1px 1px #cd4407;
+    color: rgb(0, 0, 0);
+    background-color: #bfc2d3;
+    border-style: solid;
+    border-color: #110500;
+}
+
+.operatorClick {
+    background-color: #f56122;
 }
 
 .digit {
-    background-color: #1d2435;
+    background-color: #101625;
     color: white;
-    border: #0a0c11;
-    box-shadow: inset 0px 0px 1px 1px #525358;
+    border-style: solid;
+    border-color: #494f5f;
 }
 
 .Equals {
-    background-color: #bfc2d3;
+    background-color: #cd4407;
     color: black;
     border: #70758e;
-    box-shadow: inset 0px 0px 1px 1px #bfc2d3;
 }
 
 .decimal {
-    background-color: #1d2435;
+    background-color: #101625;
     color: white;
-    border: #0a0c11;
-    box-shadow: inset 0px 0px 1px 1px #525358;
+    border-style: solid;
+    border-color: #494f5f;
+}
+
+.message {
+    display: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px; 
+    white-space: nowrap; 
+    z-index: 1000;
+}
+
+.history-button:hover .message {
+    display: block;
 }

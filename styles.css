@@ -87,6 +87,32 @@ nav {
     display: none;
 }
 
+.card {
+    width: 100%;
+    min-height: 70px;
+    background-color: #cd4407;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 3px #6b2405;
+    color: black;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: opacity 400ms, transform 400ms;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .operation {
     display: flex;
     justify-content: center;

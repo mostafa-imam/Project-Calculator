@@ -31,6 +31,22 @@ clear.addEventListener('click', handleClearClick);
 backspaceButton.addEventListener('click', handleBackspaceClick);
 document.addEventListener('keydown', handleKeydown);
 
+historyButton.addEventListener('click', () => {
+    clickToViewHistory();
+    displayHistoryCards();
+    removeHistoryCards()
+})
+
+historyButton.addEventListener('mouseenter', () => {
+    if (!container.classList.contains('containerOnHistory')) {
+        displayHistoryMessage();
+    }
+});
+
+historyButton.addEventListener('mouseleave', () => {
+    hideHistoryMessage();
+});
+
 function handleDigitClick(event) {
     let digit = event.target.dataset.digit;
     if (tempOperator === '') {
@@ -168,4 +184,50 @@ function handleBackspaceClick() {
         display(num2 || '0');
     }
     disableDecimal();
+}
+
+function appendHistoryCard(historyText) {
+    let historyCard = document.createElement('div');
+    historyCard.classList.add('card');
+    historyCard.textContent = historyText;
+    history.appendChild(historyCard);
+
+    setTimeout(() => {
+        historyCard.classList.add('visible');
+    }, 10);
+}
+
+function clickToViewHistory() {
+    container.classList.toggle('container');
+    container.classList.toggle('containerOnHistory');
+    history.classList.toggle('history');
+    history.classList.toggle('historian');
+}
+
+function displayHistoryMessage() {
+    message.classList.add('visible');
+}
+
+function hideHistoryMessage() {
+    message.classList.remove('visible');
+}
+
+function displayHistoryCards() {
+    history.textContent = '';
+    historyDisplay.forEach(item => {
+        let historyCard = document.createElement('div');
+        historyCard.classList.add('card');
+        historyCard.textContent = item;
+        history.appendChild(historyCard);
+
+        setTimeout(() => {
+            historyCard.classList.add('visible');
+        }, 10);
+    });
+}
+
+function removeHistoryCards() {
+    if (!container.classList.contains('containerOnHistory')) {
+        history.textContent = '';
+    }
 }

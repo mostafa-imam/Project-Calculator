@@ -15,49 +15,50 @@
 
         <div class="grand">
             <div class="container">
-                <div class="results">
-                    <button class="history-button">
-                        <img class="historyIcon" src="./resources/history-button.png" alt="counter-clock-wise icon with Blue arrow pointing left">
-                    </button>
-                    <div class="result">Placeholder</div>
-                    <button class="backspace-button">
-                        <img class="backspaceIcon" src="./resources/backspace-button.png" alt="blue backspace icon">
-                    </button>
-                </div>
-
+                <div class="historian"></div>
                 <div class="operation">
-                    <div class="history"></div>
+                    <div class="results">
+                        <button class="history-button">
+                            <div class="message">click to toggle history</div>
+                            <img class="historyIcon" src="./resources/history-button.png" alt="counter-clock-wise icon with Blue arrow pointing left">
+                        </button>
+                        <div class="result">0</div>
+                        <button class="backspace-button">
+                            <img class="backspaceIcon" src="./resources/backspace-button.png" alt="blue backspace icon">
+                        </button>
+                    </div>
+    
                     <div class="calc">
                         <div class="row rowContainer1">
                             <button class="clear math">C</button>
-                            <button class="Equals math">=</button>
+                            <button class="divide operator math" data-operator="/">/</button>
                         </div>
 
                         <div class="row rowContainer2">
                             <button class="seven digit math" data-digit="7">7</button>
                             <button class="eight digit math" data-digit="8">8</button>
                             <button class="nine digit math" data-digit="9">9</button>
-                            <button class="divide operator math" data-operator="division">/</button>
+                            <button class="multipy operator math" data-operator="*">*</button>
                         </div>
 
                         <div class="row rowContainer3">
                             <button class="four digit math" data-digit="4">4</button>
                             <button class="five digit math" data-digit="5">5</button>
                             <button class="six digit math" data-digit="6">6</button>
-                            <button class="multipy operator math" data-operator="multiplication">x</button>
+                            <button class="subtract operator math" data-operator="-">-</button>
                         </div>
 
                         <div class="row rowContainer4">
                             <button class="one digit math" data-digit="1">1</button>
                             <button class="two digit math" data-digit="2">2</button>
                             <button class="three digit math" data-digit="3">3</button>
-                            <button class="subtract operator math" data-operator="subtraction">-</button>
+                            <button class="add operator math" data-operator="+">+</button>
                         </div>
 
                         <div class="row rowContainer5">
                             <button class="zero digit math" data-digit="0">0</button>
-                            <button class="decimal math" data-digit="decimal">.</button>
-                            <button class="add operator math" data-operator="addition">+</button>
+                            <button class="decimal digit math" data-digit=".">.</button>
+                            <button class="Equals math">=</button>
                         </div>
                         
                     </div>

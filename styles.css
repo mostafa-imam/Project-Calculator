@@ -16,24 +16,6 @@ body {
     background-color: #bfc2d3;
 }
 
-nav {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    background-color: #293042;
-    box-shadow: 0px 0px 2px 1px rgb(0, 0, 0);
-}
-
-.logo {
-    font-size: 50px;
-    flex-grow: 3;
-    color: white;
-}
-
-.helper{
-    flex-grow: 1;
-}
-
 .grand {
     display: flex;
     justify-content: center;
@@ -222,7 +204,7 @@ nav {
 }
 
 .clear:hover {
-    background-color: #f56122;
+    background-color: #f0d2c4;
     border: #a3abce;
 }
 
@@ -232,7 +214,7 @@ nav {
 }
 
 .operator:hover {
-    background-color: #f56122;
+    background-color: #f0d2c4;
 }
 
 .row {
@@ -250,7 +232,7 @@ nav {
     flex-grow: 3;
     background-color: #bfc2d3;
     color: rgb(0, 0, 0);
-    border: #70758e;
+    border: solid #000000;
 }
 
 .operator {
@@ -261,7 +243,7 @@ nav {
 }
 
 .operatorClick {
-    background-color: #f56122;
+    background-color: #f0d2c4;
 }
 
 .digit {

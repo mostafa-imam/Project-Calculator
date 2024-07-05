@@ -205,7 +205,7 @@ body {
 
 .clear:hover {
     background-color: #f0d2c4;
-    border: #a3abce;
+    border: solid #000000;
 }
 
 .Equals:hover {

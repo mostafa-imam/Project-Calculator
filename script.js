@@ -173,6 +173,7 @@ function handleClearClick() {
     display(0);
     disableDecimal();
     removeHighlightOperator()
+    history.textContent = '';
 }
 
 function handleBackspaceClick() {
